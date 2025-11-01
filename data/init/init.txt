@@ -8,35 +8,35 @@ circumstances, unpack a new DF on top of an older one.
 
 Change this to turn sound off.
 
-[SOUND:ON]
+[SOUND:NO]
 
 The sound volume runs from 0 (off) to 255 (full).  You can set the volume from the ESC options menu as well.
 
-[VOLUME:255]
+[VOLUME:5]
 
 Change this to skip the wonderful intro movies.
 
-[INTRO:ON]
+[INTRO:NO]
 
 This lets you set the starting windowed/fullscreen setting.  Can be YES, NO or PROMPT.
 
-[WINDOWED:PROMPT]
+[WINDOWED:YES]
 
 This is the size and font for windowed mode.  Changing to 800x600 and the 800x600 font might make you happier.
 
-[WINDOWEDX:640]
-[WINDOWEDY:300]
-[FONT:curses_640x300.bmp]
+[WINDOWEDX:1600]
+[WINDOWEDY:900]
+[FONT:yayo_20x20_smile.bmp]
 
 Full screen info.
 
-[FULLSCREENX:800]
-[FULLSCREENY:600]
-[FULLFONT:curses_800x600.bmp]
+[FULLSCREENX:1600]
+[FULLSCREENY:900]
+[FULLFONT:yayo_20x20_smile.bmp]
 
 If this is set to YES, the tiles will not be stretched, but rather the game view will be centralized, surrounded by black space.  Tiles that are too large will always be compressed rather than running off the screen.
 
-[BLACK_SPACE:NO]
+[BLACK_SPACE:YES]
 
 Graphics info, most of it as above.  Set GRAPHICS to YES to turn it all on.  This will use the "raw/graphics" folder for tile information.  Currently this is limited to whatever creature graphics you have downloaded.  The game comes with a few pictures to demonstrate.  As of January 2021, the Dwarf Fortress Wiki has custom tilesets available at http://dwarffortresswiki.org/index.php/Tileset_repository and creature graphics at http://dwarffortresswiki.org/index.php/Graphics_set_repository.
 
@@ -53,8 +53,8 @@ The legacy version only supports 24 bit BMP files, so any PNGs will have to be c
 
 This is the dimensions in tiles of the display grid.  Minimum x is 80.  Minimum y is 25.  Maximums are 200.  Make sure the window size or full screen resolution matches the grid/tile size if you don't want the display to be squashed or stretched.  The default windowed font has tiles that are 8x12 pixels, for instance, so for a 80x25 grid, you use a 640x300 window, and for a 125x50 grid, you'd use a 1000x600 window.  FULLGRID is used in full screen mode, whether graphics is on or not.
 
-[GRID:80:25]
-[FULLGRID:80:25]
+[GRID:80:45]
+[FULLGRID:80:45]
 
 Change this to YES to only refresh portions of the screen that need to be refreshed.  This can have a significant impact on frame rate, especially for people that have slow frame rates on the title screen.  The number refers to how many frames it will redo a printed tile before skipping it, so you might try increasing it a bit.  PARTIAL_PRINT only works on certain systems, so you might have to disable it again if you notice your display isn't working properly.  Fixes are being investigated.
 
@@ -90,7 +90,7 @@ Change this to make the dwarfort.exe process have a different priority.  From hi
 
 Change this to NO if you don't want to have the mouse involved at all.
 
-[MOUSE:YES]
+[MOUSE:NO]
 
 Change this to YES if you'd like to use a BMP for the mouse cursor.  The image currently lags when the game is lagging however.
 
