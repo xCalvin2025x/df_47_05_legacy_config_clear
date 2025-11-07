@@ -22,13 +22,13 @@ Z轴快速移动
 */
 +Insert:: {
     loop 10 {
-        Send "{Insert}"
-        Sleep SleepTime
+        Send("{Insert}")
+        Sleep(SleepTime)
     }
 }
 +Delete:: {
     loop 10 {
-        Send "{Delete}"
-        Sleep SleepTime
+        Send("{Delete}")
+        Sleep(SleepTime)
     }
 }
