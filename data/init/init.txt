@@ -26,13 +26,13 @@ This is the size and font for windowed mode.  Changing to 800x600 and the 800x60
 
 [WINDOWEDX:1600]
 [WINDOWEDY:900]
-[FONT:yayo_20x20_smile.bmp]
+[FONT:yayo_20x20_251118.bmp]
 
 Full screen info.
 
 [FULLSCREENX:1600]
 [FULLSCREENY:900]
-[FULLFONT:yayo_20x20_smile.bmp]
+[FULLFONT:yayo_20x20_251118.bmp]
 
 If this is set to YES, the tiles will not be stretched, but rather the game view will be centralized, surrounded by black space.  Tiles that are too large will always be compressed rather than running off the screen.
 
