@@ -213,5 +213,835 @@ SleepTime := 25
 }
 
 /*
+上两次，左两次，回车，右四次，下四次，回车
+shfit+上，shfit+左
+
+回车，右，下，回车
+右，上，右
+回车，右，下，回车
+右，上，右
+回车，右，下，回车
+右，上，右
+回车，右，下，回车
+右，上，右
+回车，右，下，回车
+右，上，右
+回车，右，下，回车
+
+下两次
+回车，左，下，回车
+左，上，左
+回车，左，下，回车
+左，上，左
+回车，左，下，回车
+左，上，左
+回车，左，下，回车
+左，上，左
+回车，左，下，回车
+左，上，左
+回车，左，下，回车
+
+下两次
+回车，右，下，回车
+右，上，右
+回车，右，下，回车
+右，上，右七次
+回车，右，下，回车
+右，上，右
+回车，右，下，回车
+
+下两次
+回车，左，下，回车
+左，上，左
+回车，左，下，回车
+左，上，左七次
+回车，左，下，回车
+左，上，左
+回车，左，下，回车
+
+下两次
+回车，右，下，回车
+右，上，右
+回车，右，下，回车
+右，上，右
+回车，右，下，回车
+右，上，右
+回车，右，下，回车
+右，上，右
+回车，右，下，回车
+右，上，右
+回车，右，下，回车
+
+下两次
+回车，左，下，回车
+左，上，左
+回车，左，下，回车
+左，上，左
+回车，左，下，回车
+左，上，左
+回车，左，下，回车
+左，上，左
+回车，左，下，回车
+左，上，左
+回车，左，下，回车
+
+shfit+右，shfit+上，左，两次
+上四次，回车，回车
+左六次，回车，回车
+下六次，回车，回车
+下六次，回车，回车
+右六次，回车，回车
+右六次，回车，回车
+上六次，回车，回车
+上六次，回车，回车
+
+左三次，下三次，回车，回车
+左六次，回车，回车
+下六次，回车，回车
+右六次，回车，回车
+上六次，回车，回车
+*/
+
+/*
+地穴，在3x3中心开启d
+*/
+^2:: {
+    ; 上两次，左两次，回车，右四次，下四次，回车
+    loop 2 {
+        Send("{Up}")
+        Sleep(SleepTime)
+    }
+    loop 2 {
+        Send("{Left}")
+        Sleep(SleepTime)
+    }
+    Send("{Enter}")
+    Sleep(SleepTime)
+    loop 4 {
+        Send("{Right}")
+        Sleep(SleepTime)
+    }
+    loop 4 {
+        Send("{Down}")
+        Sleep(SleepTime)
+    }
+    Send("{Enter}")
+    Sleep(SleepTime)
+
+    ; shift+上，shift+左
+    Send("+{Up}")
+    Sleep(SleepTime)
+    Send("+{Left}")
+    Sleep(SleepTime)
+
+    ; 回车，右，下，回车
+    Send("{Enter}")
+    Sleep(SleepTime)
+    Send("{Right}")
+    Sleep(SleepTime)
+    Send("{Down}")
+    Sleep(SleepTime)
+    Send("{Enter}")
+    Sleep(SleepTime)
+
+    ; 右，上，右
+    Send("{Right}")
+    Sleep(SleepTime)
+    Send("{Up}")
+    Sleep(SleepTime)
+    Send("{Right}")
+    Sleep(SleepTime)
+
+    ; 回车，右，下，回车
+    Send("{Enter}")
+    Sleep(SleepTime)
+    Send("{Right}")
+    Sleep(SleepTime)
+    Send("{Down}")
+    Sleep(SleepTime)
+    Send("{Enter}")
+    Sleep(SleepTime)
+
+    ; 右，上，右
+    Send("{Right}")
+    Sleep(SleepTime)
+    Send("{Up}")
+    Sleep(SleepTime)
+    Send("{Right}")
+    Sleep(SleepTime)
+
+    ; 回车，右，下，回车
+    Send("{Enter}")
+    Sleep(SleepTime)
+    Send("{Right}")
+    Sleep(SleepTime)
+    Send("{Down}")
+    Sleep(SleepTime)
+    Send("{Enter}")
+    Sleep(SleepTime)
+
+    ; 右，上，右
+    Send("{Right}")
+    Sleep(SleepTime)
+    Send("{Up}")
+    Sleep(SleepTime)
+    Send("{Right}")
+    Sleep(SleepTime)
+
+    ; 回车，右，下，回车
+    Send("{Enter}")
+    Sleep(SleepTime)
+    Send("{Right}")
+    Sleep(SleepTime)
+    Send("{Down}")
+    Sleep(SleepTime)
+    Send("{Enter}")
+    Sleep(SleepTime)
+
+    ; 右，上，右
+    Send("{Right}")
+    Sleep(SleepTime)
+    Send("{Up}")
+    Sleep(SleepTime)
+    Send("{Right}")
+    Sleep(SleepTime)
+
+    ; 回车，右，下，回车
+    Send("{Enter}")
+    Sleep(SleepTime)
+    Send("{Right}")
+    Sleep(SleepTime)
+    Send("{Down}")
+    Sleep(SleepTime)
+    Send("{Enter}")
+    Sleep(SleepTime)
+
+    ; 右，上，右
+    Send("{Right}")
+    Sleep(SleepTime)
+    Send("{Up}")
+    Sleep(SleepTime)
+    Send("{Right}")
+    Sleep(SleepTime)
+
+    ; 回车，右，下，回车
+    Send("{Enter}")
+    Sleep(SleepTime)
+    Send("{Right}")
+    Sleep(SleepTime)
+    Send("{Down}")
+    Sleep(SleepTime)
+    Send("{Enter}")
+    Sleep(SleepTime)
+
+    ; 下两次
+    loop 2 {
+        Send("{Down}")
+        Sleep(SleepTime)
+    }
+
+    ; 回车，左，下，回车
+    Send("{Enter}")
+    Sleep(SleepTime)
+    Send("{Left}")
+    Sleep(SleepTime)
+    Send("{Down}")
+    Sleep(SleepTime)
+    Send("{Enter}")
+    Sleep(SleepTime)
+
+    ; 左，上，左
+    Send("{Left}")
+    Sleep(SleepTime)
+    Send("{Up}")
+    Sleep(SleepTime)
+    Send("{Left}")
+    Sleep(SleepTime)
+
+    ; 回车，左，下，回车
+    Send("{Enter}")
+    Sleep(SleepTime)
+    Send("{Left}")
+    Sleep(SleepTime)
+    Send("{Down}")
+    Sleep(SleepTime)
+    Send("{Enter}")
+    Sleep(SleepTime)
+
+    ; 左，上，左
+    Send("{Left}")
+    Sleep(SleepTime)
+    Send("{Up}")
+    Sleep(SleepTime)
+    Send("{Left}")
+    Sleep(SleepTime)
+
+    ; 回车，左，下，回车
+    Send("{Enter}")
+    Sleep(SleepTime)
+    Send("{Left}")
+    Sleep(SleepTime)
+    Send("{Down}")
+    Sleep(SleepTime)
+    Send("{Enter}")
+    Sleep(SleepTime)
+
+    ; 左，上，左
+    Send("{Left}")
+    Sleep(SleepTime)
+    Send("{Up}")
+    Sleep(SleepTime)
+    Send("{Left}")
+    Sleep(SleepTime)
+
+    ; 回车，左，下，回车
+    Send("{Enter}")
+    Sleep(SleepTime)
+    Send("{Left}")
+    Sleep(SleepTime)
+    Send("{Down}")
+    Sleep(SleepTime)
+    Send("{Enter}")
+    Sleep(SleepTime)
+
+    ; 左，上，左
+    Send("{Left}")
+    Sleep(SleepTime)
+    Send("{Up}")
+    Sleep(SleepTime)
+    Send("{Left}")
+    Sleep(SleepTime)
+
+    ; 回车，左，下，回车
+    Send("{Enter}")
+    Sleep(SleepTime)
+    Send("{Left}")
+    Sleep(SleepTime)
+    Send("{Down}")
+    Sleep(SleepTime)
+    Send("{Enter}")
+    Sleep(SleepTime)
+
+    ; 左，上，左
+    Send("{Left}")
+    Sleep(SleepTime)
+    Send("{Up}")
+    Sleep(SleepTime)
+    Send("{Left}")
+    Sleep(SleepTime)
+
+    ; 回车，左，下，回车
+    Send("{Enter}")
+    Sleep(SleepTime)
+    Send("{Left}")
+    Sleep(SleepTime)
+    Send("{Down}")
+    Sleep(SleepTime)
+    Send("{Enter}")
+    Sleep(SleepTime)
+
+    ; 下两次
+    loop 2 {
+        Send("{Down}")
+        Sleep(SleepTime)
+    }
+
+    ; 回车，右，下，回车
+    Send("{Enter}")
+    Sleep(SleepTime)
+    Send("{Right}")
+    Sleep(SleepTime)
+    Send("{Down}")
+    Sleep(SleepTime)
+    Send("{Enter}")
+    Sleep(SleepTime)
+
+    ; 右，上，右
+    Send("{Right}")
+    Sleep(SleepTime)
+    Send("{Up}")
+    Sleep(SleepTime)
+    Send("{Right}")
+    Sleep(SleepTime)
+
+    ; 回车，右，下，回车
+    Send("{Enter}")
+    Sleep(SleepTime)
+    Send("{Right}")
+    Sleep(SleepTime)
+    Send("{Down}")
+    Sleep(SleepTime)
+    Send("{Enter}")
+    Sleep(SleepTime)
+
+    ; 右，上，右七次
+    Send("{Right}")
+    Sleep(SleepTime)
+    Send("{Up}")
+    Sleep(SleepTime)
+    loop 7 {
+        Send("{Right}")
+        Sleep(SleepTime)
+    }
+
+    ; 回车，右，下，回车
+    Send("{Enter}")
+    Sleep(SleepTime)
+    Send("{Right}")
+    Sleep(SleepTime)
+    Send("{Down}")
+    Sleep(SleepTime)
+    Send("{Enter}")
+    Sleep(SleepTime)
+
+    ; 右，上，右
+    Send("{Right}")
+    Sleep(SleepTime)
+    Send("{Up}")
+    Sleep(SleepTime)
+    Send("{Right}")
+    Sleep(SleepTime)
+
+    ; 回车，右，下，回车
+    Send("{Enter}")
+    Sleep(SleepTime)
+    Send("{Right}")
+    Sleep(SleepTime)
+    Send("{Down}")
+    Sleep(SleepTime)
+    Send("{Enter}")
+    Sleep(SleepTime)
+
+    ; 下两次
+    loop 2 {
+        Send("{Down}")
+        Sleep(SleepTime)
+    }
+
+    ; 回车，左，下，回车
+    Send("{Enter}")
+    Sleep(SleepTime)
+    Send("{Left}")
+    Sleep(SleepTime)
+    Send("{Down}")
+    Sleep(SleepTime)
+    Send("{Enter}")
+    Sleep(SleepTime)
+
+    ; 左，上，左
+    Send("{Left}")
+    Sleep(SleepTime)
+    Send("{Up}")
+    Sleep(SleepTime)
+    Send("{Left}")
+    Sleep(SleepTime)
+
+    ; 回车，左，下，回车
+    Send("{Enter}")
+    Sleep(SleepTime)
+    Send("{Left}")
+    Sleep(SleepTime)
+    Send("{Down}")
+    Sleep(SleepTime)
+    Send("{Enter}")
+    Sleep(SleepTime)
+
+    ; 左，上，左七次
+    Send("{Left}")
+    Sleep(SleepTime)
+    Send("{Up}")
+    Sleep(SleepTime)
+    loop 7 {
+        Send("{Left}")
+        Sleep(SleepTime)
+    }
+
+    ; 回车，左，下，回车
+    Send("{Enter}")
+    Sleep(SleepTime)
+    Send("{Left}")
+    Sleep(SleepTime)
+    Send("{Down}")
+    Sleep(SleepTime)
+    Send("{Enter}")
+    Sleep(SleepTime)
+
+    ; 左，上，左
+    Send("{Left}")
+    Sleep(SleepTime)
+    Send("{Up}")
+    Sleep(SleepTime)
+    Send("{Left}")
+    Sleep(SleepTime)
+
+    ; 回车，左，下，回车
+    Send("{Enter}")
+    Sleep(SleepTime)
+    Send("{Left}")
+    Sleep(SleepTime)
+    Send("{Down}")
+    Sleep(SleepTime)
+    Send("{Enter}")
+    Sleep(SleepTime)
+
+    ; 下两次
+    loop 2 {
+        Send("{Down}")
+        Sleep(SleepTime)
+    }
+
+    ; 回车，右，下，回车
+    Send("{Enter}")
+    Sleep(SleepTime)
+    Send("{Right}")
+    Sleep(SleepTime)
+    Send("{Down}")
+    Sleep(SleepTime)
+    Send("{Enter}")
+    Sleep(SleepTime)
+
+    ; 右，上，右
+    Send("{Right}")
+    Sleep(SleepTime)
+    Send("{Up}")
+    Sleep(SleepTime)
+    Send("{Right}")
+    Sleep(SleepTime)
+
+    ; 回车，右，下，回车
+    Send("{Enter}")
+    Sleep(SleepTime)
+    Send("{Right}")
+    Sleep(SleepTime)
+    Send("{Down}")
+    Sleep(SleepTime)
+    Send("{Enter}")
+    Sleep(SleepTime)
+
+    ; 右，上，右
+    Send("{Right}")
+    Sleep(SleepTime)
+    Send("{Up}")
+    Sleep(SleepTime)
+    Send("{Right}")
+    Sleep(SleepTime)
+
+    ; 回车，右，下，回车
+    Send("{Enter}")
+    Sleep(SleepTime)
+    Send("{Right}")
+    Sleep(SleepTime)
+    Send("{Down}")
+    Sleep(SleepTime)
+    Send("{Enter}")
+    Sleep(SleepTime)
+
+    ; 右，上，右
+    Send("{Right}")
+    Sleep(SleepTime)
+    Send("{Up}")
+    Sleep(SleepTime)
+    Send("{Right}")
+    Sleep(SleepTime)
+
+    ; 回车，右，下，回车
+    Send("{Enter}")
+    Sleep(SleepTime)
+    Send("{Right}")
+    Sleep(SleepTime)
+    Send("{Down}")
+    Sleep(SleepTime)
+    Send("{Enter}")
+    Sleep(SleepTime)
+
+    ; 右，上，右
+    Send("{Right}")
+    Sleep(SleepTime)
+    Send("{Up}")
+    Sleep(SleepTime)
+    Send("{Right}")
+    Sleep(SleepTime)
+
+    ; 回车，右，下，回车
+    Send("{Enter}")
+    Sleep(SleepTime)
+    Send("{Right}")
+    Sleep(SleepTime)
+    Send("{Down}")
+    Sleep(SleepTime)
+    Send("{Enter}")
+    Sleep(SleepTime)
+
+    ; 右，上，右
+    Send("{Right}")
+    Sleep(SleepTime)
+    Send("{Up}")
+    Sleep(SleepTime)
+    Send("{Right}")
+    Sleep(SleepTime)
+
+    ; 回车，右，下，回车
+    Send("{Enter}")
+    Sleep(SleepTime)
+    Send("{Right}")
+    Sleep(SleepTime)
+    Send("{Down}")
+    Sleep(SleepTime)
+    Send("{Enter}")
+    Sleep(SleepTime)
+
+    ; 下两次
+    loop 2 {
+        Send("{Down}")
+        Sleep(SleepTime)
+    }
+
+    ; 回车，左，下，回车
+    Send("{Enter}")
+    Sleep(SleepTime)
+    Send("{Left}")
+    Sleep(SleepTime)
+    Send("{Down}")
+    Sleep(SleepTime)
+    Send("{Enter}")
+    Sleep(SleepTime)
+
+    ; 左，上，左
+    Send("{Left}")
+    Sleep(SleepTime)
+    Send("{Up}")
+    Sleep(SleepTime)
+    Send("{Left}")
+    Sleep(SleepTime)
+
+    ; 回车，左，下，回车
+    Send("{Enter}")
+    Sleep(SleepTime)
+    Send("{Left}")
+    Sleep(SleepTime)
+    Send("{Down}")
+    Sleep(SleepTime)
+    Send("{Enter}")
+    Sleep(SleepTime)
+
+    ; 左，上，左
+    Send("{Left}")
+    Sleep(SleepTime)
+    Send("{Up}")
+    Sleep(SleepTime)
+    Send("{Left}")
+    Sleep(SleepTime)
+
+    ; 回车，左，下，回车
+    Send("{Enter}")
+    Sleep(SleepTime)
+    Send("{Left}")
+    Sleep(SleepTime)
+    Send("{Down}")
+    Sleep(SleepTime)
+    Send("{Enter}")
+    Sleep(SleepTime)
+
+    ; 左，上，左
+    Send("{Left}")
+    Sleep(SleepTime)
+    Send("{Up}")
+    Sleep(SleepTime)
+    Send("{Left}")
+    Sleep(SleepTime)
+
+    ; 回车，左，下，回车
+    Send("{Enter}")
+    Sleep(SleepTime)
+    Send("{Left}")
+    Sleep(SleepTime)
+    Send("{Down}")
+    Sleep(SleepTime)
+    Send("{Enter}")
+    Sleep(SleepTime)
+
+    ; 左，上，左
+    Send("{Left}")
+    Sleep(SleepTime)
+    Send("{Up}")
+    Sleep(SleepTime)
+    Send("{Left}")
+    Sleep(SleepTime)
+
+    ; 回车，左，下，回车
+    Send("{Enter}")
+    Sleep(SleepTime)
+    Send("{Left}")
+    Sleep(SleepTime)
+    Send("{Down}")
+    Sleep(SleepTime)
+    Send("{Enter}")
+    Sleep(SleepTime)
+
+    ; 左，上，左
+    Send("{Left}")
+    Sleep(SleepTime)
+    Send("{Up}")
+    Sleep(SleepTime)
+    Send("{Left}")
+    Sleep(SleepTime)
+
+    ; 回车，左，下，回车
+    Send("{Enter}")
+    Sleep(SleepTime)
+    Send("{Left}")
+    Sleep(SleepTime)
+    Send("{Down}")
+    Sleep(SleepTime)
+    Send("{Enter}")
+    Sleep(SleepTime)
+
+    ; shift+右，shift+上，左两次
+    Send("+{Right}")
+    Sleep(SleepTime)
+    Send("+{Up}")
+    Sleep(SleepTime)
+    loop 2 {
+        Send("{Left}")
+        Sleep(SleepTime)
+    }
+
+    ; 上四次，回车，回车
+    loop 4 {
+        Send("{Up}")
+        Sleep(SleepTime)
+    }
+    Send("{Enter}")
+    Sleep(SleepTime)
+    Send("{Enter}")
+    Sleep(SleepTime)
+
+    ; 左六次，回车，回车
+    loop 6 {
+        Send("{Left}")
+        Sleep(SleepTime)
+    }
+    Send("{Enter}")
+    Sleep(SleepTime)
+    Send("{Enter}")
+    Sleep(SleepTime)
+
+    ; 下六次，回车，回车
+    loop 6 {
+        Send("{Down}")
+        Sleep(SleepTime)
+    }
+    Send("{Enter}")
+    Sleep(SleepTime)
+    Send("{Enter}")
+    Sleep(SleepTime)
+
+    ; 下六次，回车，回车
+    loop 6 {
+        Send("{Down}")
+        Sleep(SleepTime)
+    }
+    Send("{Enter}")
+    Sleep(SleepTime)
+    Send("{Enter}")
+    Sleep(SleepTime)
+
+    ; 右六次，回车，回车
+    loop 6 {
+        Send("{Right}")
+        Sleep(SleepTime)
+    }
+    Send("{Enter}")
+    Sleep(SleepTime)
+    Send("{Enter}")
+    Sleep(SleepTime)
+
+    ; 右六次，回车，回车
+    loop 6 {
+        Send("{Right}")
+        Sleep(SleepTime)
+    }
+    Send("{Enter}")
+    Sleep(SleepTime)
+    Send("{Enter}")
+    Sleep(SleepTime)
+
+    ; 上六次，回车，回车
+    loop 6 {
+        Send("{Up}")
+        Sleep(SleepTime)
+    }
+    Send("{Enter}")
+    Sleep(SleepTime)
+    Send("{Enter}")
+    Sleep(SleepTime)
+
+    ; 上六次，回车，回车
+    loop 6 {
+        Send("{Up}")
+        Sleep(SleepTime)
+    }
+    Send("{Enter}")
+    Sleep(SleepTime)
+    Send("{Enter}")
+    Sleep(SleepTime)
+
+    ; 左三次，下三次，回车，回车
+    loop 3 {
+        Send("{Left}")
+        Sleep(SleepTime)
+    }
+    loop 3 {
+        Send("{Down}")
+        Sleep(SleepTime)
+    }
+    Send("{Enter}")
+    Sleep(SleepTime)
+    Send("{Enter}")
+    Sleep(SleepTime)
+
+    ; 左六次，回车，回车
+    loop 6 {
+        Send("{Left}")
+        Sleep(SleepTime)
+    }
+    Send("{Enter}")
+    Sleep(SleepTime)
+    Send("{Enter}")
+    Sleep(SleepTime)
+
+    ; 下六次，回车，回车
+    loop 6 {
+        Send("{Down}")
+        Sleep(SleepTime)
+    }
+    Send("{Enter}")
+    Sleep(SleepTime)
+    Send("{Enter}")
+    Sleep(SleepTime)
+
+    ; 右六次，回车，回车
+    loop 6 {
+        Send("{Right}")
+        Sleep(SleepTime)
+    }
+    Send("{Enter}")
+    Sleep(SleepTime)
+    Send("{Enter}")
+    Sleep(SleepTime)
+
+    ; 上六次，回车，回车
+    loop 6 {
+        Send("{Up}")
+        Sleep(SleepTime)
+    }
+    Send("{Enter}")
+    Sleep(SleepTime)
+    Send("{Enter}")
+    Sleep(SleepTime)
+
+}
+
+/*
 后续建筑
 */
