@@ -34,8 +34,8 @@ You can change the option below to ALWAYS and NO.  More restrictive world parame
 
 Use these options to remove features from the game.  Permitted values are YES and NO.  Removal might speed the game up in the case of temperature and weather.
 
-[TEMPERATURE:YES]
-[WEATHER:YES]
+[TEMPERATURE:NO]
+[WEATHER:NO]
 [ECONOMY:YES]
 [INVADERS:YES]
 [CAVEINS:YES]
@@ -254,8 +254,8 @@ You can set the maximum number of visitors to your fort here.  This does not inc
 
 You can set the maximum number of soldiers allowed to invade in serious invasions with these numbers.  This doesn't affect smaller raids or mounts, and ambushers and other special units will also ignore the cap.  Set INVADERS to NO above if you don't want invaders -- a cap of zero will be ignored here.
 
-[INVASION_SOLDIER_CAP:120]
-[INVASION_MONSTER_CAP:40]
+[INVASION_SOLDIER_CAP:100]
+[INVASION_MONSTER_CAP:20]
 
 Use the specific seed cap to set the maximum number of seeds of each kind generally allowed in the fortress.  Use the fortress seed cap to control the overall number of seeds allowed.  Seeds over the global cap will be periodically removed, starting with the oldest and most worthless seeds.
 
